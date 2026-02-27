@@ -29,7 +29,7 @@ const About: React.FC = () => {
                  TODO: Replace with actual professional headshot. 
                */}
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80" 
+                  src="media\WhatsApp Image 2026-01-04 at 10.20.56.jpeg" 
                   alt="Labh Jethe" 
                   className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500 scale-105"
                 />
@@ -89,7 +89,7 @@ const About: React.FC = () => {
 
             {/* Tech Stack Mini-Bar */}
             <div className="mt-8 pt-6 border-t border-white/5 flex flex-wrap gap-4">
-               {['Java', 'Spring Boot', 'Microservices', 'AWS', 'Kafka', 'Redis', 'LangChain'].map((tag) => (
+               {['Java', 'Spring Boot', 'Python', 'FastAPI', 'Microservices', 'AWS', 'Kafka', 'Redis', 'LangChain'].map((tag) => (
                  <span key={tag} className="px-3 py-1 bg-slate-800 rounded text-sm text-primary-400 font-mono border border-primary-500/20">
                    #{tag}
                  </span>

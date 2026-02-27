@@ -35,6 +35,7 @@ export const SKILLS: Skill[] = [
   
   // Frameworks & Architecture
   { name: "Spring Boot 3", icon: "Leaf", category: "Frameworks" },
+  { name: "FastAPI", icon: "Zap", category: "Frameworks" },
   { name: "Microservices", icon: "Network", category: "Frameworks" },
   { name: "RESTful APIs", icon: "Globe", category: "Frameworks" },
   { name: "GraphQL", icon: "Share2", category: "Frameworks" },

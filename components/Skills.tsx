@@ -5,7 +5,7 @@ import {
   Coffee, Leaf, Globe, Network, Database, Table, Container, Repeat, 
   GitBranch, Activity, Layers, Bot, Terminal, Share2, ArrowRightLeft, 
   Files, Search, Box, RefreshCw, BarChart3, Server, FileCode,
-  Sparkles, BrainCircuit, DatabaseZap 
+  Sparkles, BrainCircuit, DatabaseZap, Zap
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const iconMap: Record<string, any> = {
   Coffee, Leaf, Globe, Network, Database, Table, Container, Repeat, 
   GitBranch, Activity, Layers, Bot, Terminal, Share2, ArrowRightLeft, 
   Files, Search, Box, RefreshCw, BarChart3, Server, FileCode,
-  Sparkles, BrainCircuit, DatabaseZap
+  Sparkles, BrainCircuit, DatabaseZap, Zap
 };
 
 const SkillCard: React.FC<{ skill: typeof SKILLS[0] }> = ({ skill }) => {

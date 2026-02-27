@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { ArrowDown, Download } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { PROFILE } from '../constants';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -12,7 +12,9 @@ const Home: React.FC = () => {
 
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+
+  const words = "Architecting Scalable Backends.".split(" ");
 
   return (
     <section 
@@ -20,58 +22,46 @@ const Home: React.FC = () => {
       ref={targetRef}
       className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden"
     >
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
+      </div>
+
       <motion.div 
         style={{ opacity, scale, y }}
         className="text-center relative z-10 max-w-6xl mx-auto px-4 w-full"
       >
-        <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-5xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-tight"
-        >
-          Architecting <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-primary-200 to-slate-400 drop-shadow-sm">
-            Scalable Backends.
-          </span>
-        </motion.h1>
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-tight overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {words.map((word, i) => (
+              <motion.span
+                key={i}
+                initial={{ y: 100, opacity: 0, rotate: 5 }}
+                animate={{ y: 0, opacity: 1, rotate: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.2, 0.65, 0.3, 0.9],
+                  delay: i * 0.15
+                }}
+                className={i >= 1 ? "text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-primary-200 to-slate-400 drop-shadow-sm" : ""}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </div>
+        </h1>
 
         <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          transition={{ delay: 0.6, duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           I am <strong className="text-white">{PROFILE.name}</strong>, a {PROFILE.title}. 
-          I build robust APIs, high-throughput distributed systems, and cloud-native infrastructure using 
-          <span className="text-primary-400 font-semibold"> Java</span> and <span className="text-primary-400 font-semibold">Spring Boot</span>.
+          I specialize in architecting robust APIs, high-throughput distributed systems, and cloud-native infrastructure. 
+          I leverage AI integration to build and scale complex systems, while continuously advancing my expertise in artificial intelligence technologies.
         </motion.p>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-20"
-        >
-          <a 
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="px-8 py-4 bg-white text-slate-950 font-bold rounded-lg hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto"
-          >
-            View Architecture
-          </a>
-          
-          <button 
-            className="px-8 py-4 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-500 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25 ring-1 ring-white/10"
-            onClick={() => alert("Resume functionality would be implemented here.")}
-          >
-            <Download size={18} />
-            Download CV
-          </button>
-        </motion.div>
 
         {/* 3D Floating Code Snippet Visual */}
         <motion.div 
