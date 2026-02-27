@@ -29,7 +29,7 @@ const About: React.FC = () => {
                  TODO: Replace with actual professional headshot. 
                */}
                 <img 
-                  src="public\profile.jpeg" 
+                  src="\profile.jpeg" 
                   alt="Labh Jethe" 
                   className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500 scale-105"
                 />
