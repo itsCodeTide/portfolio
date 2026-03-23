@@ -28,7 +28,7 @@ const About: React.FC = () => {
              {/* Image Container */}
              <motion.div style={{ y }} className="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-900 shadow-2xl z-10 bg-slate-800">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80" 
+                  src="/profile.jpeg" 
                   alt="Labh Jethe" 
                   className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500 scale-105"
                   loading="lazy"
