@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labh Jethe | Cloud-Native Backend Engineer</title>
+    <meta name="description" content="Portfolio of Labh Jethe, a Cloud-Native Backend Engineer specializing in Java, Spring Boot, FastAPI, and AI Integration." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              slate: {
+                200: '#F3F4F6',
+                300: '#E5E7EB', // text
+                400: '#9CA3AF', // muted
+                500: '#6B7280',
+                600: '#4B5563',
+                700: '#374151',
+                800: '#1F2937',
+                900: '#111827', // surface
+                950: '#0B0F19', // background
+              },
+              primary: {
+                100: '#DBEAFE',
+                200: '#BFDBFE',
+                300: '#93C5FD',
+                400: '#22D3EE', // cyan (secondary accent)
+                500: '#3B82F6', // electric blue (primary accent)
+                600: '#2563EB',
+                700: '#1D4ED8',
+                800: '#1E40AF',
+                900: '#1E3A8A',
+              }
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0B0F19; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1F2937; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #374151; 
+      }
+      body {
+        background-color: #0B0F19;
+        color: #E5E7EB;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.31.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
